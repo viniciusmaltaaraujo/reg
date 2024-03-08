@@ -13,6 +13,7 @@ namespace UnitTests.Domain.Sample.Common
 			=> new();
 		public Mock<IUnitOfWork> GetUnitOfWorkMock()
 			=> new();
+
 		public string GetValidExampleName()
 		{
 			var sampleName = "";
