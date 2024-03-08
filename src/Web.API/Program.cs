@@ -25,6 +25,7 @@ builder.Logging
 		options.AddOtlpExporter();
 	}));
 
+
 builder.Services
 	.AddAppConections(builder.Configuration)
 	.AddApplicationConfiguration(serviceName)
