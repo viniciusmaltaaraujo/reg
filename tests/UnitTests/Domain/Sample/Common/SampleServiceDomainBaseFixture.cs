@@ -11,7 +11,6 @@ namespace UnitTests.Domain.Sample.Common
 	{
 		public Mock<IExampleRepository> GetRepositoryMock()
 			=> new();
-
 		public Mock<IUnitOfWork> GetUnitOfWorkMock()
 			=> new();
 		public string GetValidExampleName()
