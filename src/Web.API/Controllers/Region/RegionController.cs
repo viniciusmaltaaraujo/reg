@@ -3,11 +3,13 @@ using Application.DTO.Sample.Example.Common;
 using Application.Facade.Sample;
 using Microsoft.AspNetCore.Mvc;
 using Web.API.ApiModels.Response;
+using Asp.Versioning;
 
 namespace Web.API.Controllers.Region
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiVersion("1.0")]
     public class RegionController : ControllerBase
     {
         private readonly ExampleFacade _exampleFacade;

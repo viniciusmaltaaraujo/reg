@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Resources;
 using Web.API.Configurations;
@@ -34,6 +35,13 @@ builder.Services
 	{
 		builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 	}));
+
+builder.Services.AddApiVersioning(options =>
+{
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.ReportApiVersions = true;
+});
 
 var app = builder.Build();
 app.UseOpenTelemetryPrometheusScrapingEndpoint();
