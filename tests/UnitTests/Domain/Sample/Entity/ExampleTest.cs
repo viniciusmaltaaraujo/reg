@@ -33,7 +33,6 @@ namespace UnitTests.Domain.Sample.Entity
 			example.IsActive.Should().BeTrue();
 		}
 
-
 		[Fact(DisplayName = nameof(InstantiateWithId))]
 		[Trait("Domain", "Example - Aggregates")]
 		public void InstantiateWithId()
