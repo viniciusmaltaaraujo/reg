@@ -34,6 +34,7 @@ namespace UnitTests.Domain.Sample.Common
 			return sampleDescription;
 		}
 
+
 		public DomainEntity.Example GetValidExample()
 			=> new(
 				GetRandomId(),
